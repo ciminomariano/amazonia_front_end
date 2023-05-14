@@ -10,6 +10,13 @@ function Form() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    const validValuesRegex = /^[A-H][1-8]$/;
+    if (!validValuesRegex.test(start) || !validValuesRegex.test(pickup) || !validValuesRegex.test(destination)) {
+      alert('Please enter valid values (A1 to F8) in the fields.');
+      return;
+    }
+
     const response = await fetch('http://localhost:8000/deliveries', {
       method: 'POST',
       headers: {
