@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start": "node server.js"
+    "start": "node src/form.js"
   },
   "dependencies": {
     "axios": "^1.4.0"
