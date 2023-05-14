@@ -2,6 +2,9 @@
   "name": "amazonia-front",
   "version": "1.0.0",
   "description": "Your app description",
+  "engines": {
+    "node": "18.16.0"
+  },
   "scripts": {
     "start": "react-scripts start"
   },
