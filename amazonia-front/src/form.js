@@ -17,7 +17,7 @@ function Form() {
       return;
     }
 
-    const response = await fetch('http://localhost:8000/deliveries', {
+    const response = await fetch('https://amazoniaback.herokuapp.com/deliveries', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -33,7 +33,7 @@ function Form() {
 
   const handleGetLastTrips = async (e) => {
     e.preventDefault();
-    const response = await fetch('http://localhost:8000/deliveries');
+    const response = await fetch('https://amazoniaback.herokuapp.com/deliveries');
     const data = await response.json();
     console.log(data);
     setTrips(data);
